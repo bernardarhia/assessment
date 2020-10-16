@@ -1,0 +1,21 @@
+.sidebar{
+    height: auto;
+    background: yellow;
+    margin-right: 2rem;
+    &__lists{
+        @extend %flex_sb;
+        flex-direction: column;
+
+        .sidebar__list{
+            padding: 2rem;
+            color: #ccc;
+            font-weight: 600;
+            transition: .3s ease-in;
+
+            &:hover{
+                background: $primary_color;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.2;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100%;
+    background: $body_bg;
+}
+
+.body__wrapper{
+   @extend %defalut;
+   margin: 3rem auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+.layout{
+    height: auto;
+}
+select{
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 17px;
+     /* for Firefox */ 
+     -moz-appearance: none; 
+     /* for Safari, Chrome, Opera */ 
+     -webkit-appearance: none; 
+     cursor: pointer;
+     background:#E3EAEE;
+     padding: 1rem;
+     color:#67748E;
+     font-weight: 600;
+}
+select::-ms-expand { 
+    display: none; 
+  } 
+
+  .container{
+      width: 90%;
+      margin: 0 auto;
+  }

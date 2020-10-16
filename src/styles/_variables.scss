@@ -1,0 +1,24 @@
+%flex_sb{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+%flex_ct{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: centers;
+}
+
+%defalut {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #fff;
+}
+$body_bg:#E3EAEF;
+$primary_color:#02C0CE;
+$gradient :linear-gradient(87deg, #11cdef 0, #1171ef 100%);
+$text_color:#474747;

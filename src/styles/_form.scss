@@ -1,0 +1,134 @@
+.form{
+    height:auto;
+    padding: 0 3rem 3rem 3rem;
+    flex: 1;
+    margin-left: 1rem;
+    label{
+        color:#32325D;
+        font-weight: 600;
+        font-weight: 14px;
+        display: inline-block;
+        padding-bottom: 1rem;
+    }
+    input{
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        border: none;
+        background: #E9ECEF;
+
+        &:placeholder-shown{
+            color: #67748E;
+        }
+        &::placeholder{
+            color: #67748E;   
+             }
+
+             &::-moz-placeholder{
+                color: #67748E;
+             }
+             &::-ms-input-placeholder{
+                color: #67748E;
+             }
+             &::-webkit-input-placeholder{
+                color: #67748E;
+             }
+    }
+    .disease__input{
+        padding-bottom: 2rem;
+        
+    }
+
+    .status{
+        padding-bottom: 2rem;
+        select{
+            display: block;
+            width: 40%;
+            background: transparent;
+            border: 1px solid #888;
+            padding: .5rem;
+            border-radius: 5px;
+            color: #000;
+        }
+    }
+
+    .diagnosis {
+        padding-bottom: 2rem;
+        input{
+            display: block;
+        }
+    }
+.medication{
+    padding-bottom: 2rem;
+}
+    .diagnosis__type{
+      padding-bottom: 2rem;
+    }
+
+    .test{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4rem;
+        border-bottom:2px solid;
+        margin-bottom: 3rem;
+        .blood__test{
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+        .prove{
+            margin: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+            input{
+                display: none;
+            }
+            label{
+                &:nth-child(2){
+                    color: red;
+                    border: 5px dotted #ccc;
+                    padding: 5rem;
+                }
+            }
+        }
+    }
+
+.deficiencies{
+    margin-bottom: 3rem;
+}
+    .btns{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+            display: block;
+            border: none;
+            border-radius: 2px;
+        }
+
+        .previous {
+            button{
+                padding: .7rem 2rem;
+                background: #F7FAFC;
+                box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.329);
+                font-weight: 600;
+                font-size: 1rem;
+                margin-right: 1rem;
+                color: #333;
+            }
+        }
+    }
+        .save {
+            button{
+                padding: 1rem;
+                background: #02C0CE;
+                box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.308);
+                font-weight: 600;
+                font-size: 1rem;
+                color: #fff;
+            }
+    }
+}
