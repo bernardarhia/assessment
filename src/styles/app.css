@@ -1,8 +1,15 @@
-.report__page .report__body .medical__info .sub__details, .report__page .report__body .report__nav .nav__lists, .report__page .showcase, .sidebar__lists {
+.sidebar__lists, .report__page .showcase, .report__page .report__body .report__nav .nav__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .body__wrapper {
@@ -15,7 +22,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
   list-style: none;
   text-decoration: none;
@@ -30,8 +38,12 @@ body {
 
 .body__wrapper {
   margin: 3rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .layout {
@@ -68,27 +80,38 @@ select::-ms-expand {
   margin-bottom: 3rem;
   padding: 1rem;
 }
+
 .navbar .user__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 .navbar .user__info .icon {
   padding-right: 1rem;
 }
+
 .navbar .user__info .user__avatar {
   height: 30px;
   width: 30px;
 }
+
 .navbar .user__info .user__avatar img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
+
 .navbar .user__info .username {
   color: #707070;
   font-size: 14px;
-  padding: 0 1rem 0 0.5rem;
+  padding: 0 1rem 0 .5rem;
 }
 
 .add__customer {
@@ -97,6 +120,7 @@ select::-ms-expand {
   padding: 1.5rem;
   background: #fff;
 }
+
 .add__customer p {
   font-size: 1.3rem;
   color: #474747;
@@ -107,15 +131,22 @@ select::-ms-expand {
   height: auto;
   margin-right: 2rem;
 }
+
 .sidebar__lists {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .sidebar__lists .sidebar__list {
   padding: 2rem;
   color: #ccc;
   font-weight: 600;
-  transition: 0.3s ease-in;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
+
 .sidebar__lists .sidebar__list:hover {
   background: #02C0CE;
   color: #fff;
@@ -126,12 +157,16 @@ select::-ms-expand {
     display: none;
   }
 }
+
 .form {
   height: auto;
   padding: 0 0 3rem 0;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-left: 1rem;
 }
+
 .form label {
   color: #32325D;
   font-weight: 600;
@@ -139,6 +174,7 @@ select::-ms-expand {
   display: inline-block;
   padding-bottom: 1rem;
 }
+
 .form input {
   width: 100%;
   padding: 1rem;
@@ -147,102 +183,162 @@ select::-ms-expand {
   border: none;
   background: #E9ECEF;
 }
+
 .form input:placeholder-shown {
   color: #67748E;
 }
-.form input::placeholder {
-  color: #67748E;
-}
-.form input::-moz-placeholder {
-  color: #67748E;
-}
-.form input::-ms-input-placeholder {
-  color: #67748E;
-}
+
 .form input::-webkit-input-placeholder {
   color: #67748E;
 }
+
+.form input:-ms-input-placeholder {
+  color: #67748E;
+}
+
+.form input::-ms-input-placeholder {
+  color: #67748E;
+}
+
+.form input::placeholder {
+  color: #67748E;
+}
+
+.form input::-moz-placeholder {
+  color: #67748E;
+}
+
+.form input::-ms-input-placeholder {
+  color: #67748E;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #67748E;
+}
+
 .form .disease__input {
   padding-bottom: 2rem;
 }
+
 .form .status {
   padding-bottom: 2rem;
 }
+
 .form .status select {
   display: block;
   width: 40%;
   background: transparent;
   border: 1px solid #888;
-  padding: 0.5rem;
+  padding: .5rem;
   border-radius: 5px;
   color: #000;
 }
+
 .form .diagnosis {
   padding-bottom: 2rem;
 }
+
 .form .diagnosis input {
   display: block;
 }
+
 .form .medication {
   padding-bottom: 2rem;
 }
+
 .form .diagnosis__type {
   padding-bottom: 2rem;
 }
+
 .form .test {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-bottom: 4rem;
   border-bottom: 2px solid;
   margin-bottom: 3rem;
 }
+
 .form .test .blood__test {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .form .test .prove {
   margin: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 .form .test .prove input {
   display: none;
 }
+
 .form .test .prove label:nth-child(2) {
   color: red;
   border: 5px dotted #ccc;
   padding: 5rem;
 }
+
 .form .deficiencies {
   padding-bottom: 3rem;
   margin-bottom: 2rem;
   border-bottom: 2px solid;
 }
+
 .form .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .form .btns a {
   display: block;
   border: none;
   border-radius: 2px;
 }
+
 .form .btns .previous a {
-  padding: 0.7rem 2rem;
+  padding: .7rem 2rem;
   background: #F7FAFC;
-  box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.329);
+  -webkit-box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.329);
+          box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.329);
   font-weight: 600;
   font-size: 1rem;
   margin-right: 1rem;
   color: #333;
 }
+
 .form .save a {
   padding: 1rem;
   background: #02C0CE;
-  box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.308);
+  -webkit-box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.308);
+          box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.308);
   font-weight: 600;
   font-size: 1rem;
   color: #fff;
@@ -256,6 +352,7 @@ select::-ms-expand {
     padding-bottom: 2rem;
   }
 }
+
 @media (max-width: 560px) {
   .form {
     margin-left: 0;
@@ -264,58 +361,77 @@ select::-ms-expand {
     padding: 1.5rem !important;
   }
 }
+
 .report__page .showcase {
   padding: 3rem 2.5rem 5rem 2.5rem;
   background: linear-gradient(87deg, #11cdef 0, #1171ef 100%);
   height: auto;
 }
+
 .report__page .showcase .username, .report__page .showcase .edit__profile {
   padding: 3rem 2rem;
 }
+
 .report__page .showcase .username .name {
   font-size: 2.5rem;
   color: #fff;
   padding-bottom: 1rem;
 }
+
 .report__page .showcase .username .text {
   color: #fff;
 }
+
 .report__page .showcase .edit__profile a {
   display: inline-block;
   background: #fff;
   padding: 1rem 3rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
   border-radius: 5px;
   font-weight: 600;
   color: #1171ef;
 }
+
 .report__page .report__body {
   padding: 2rem;
   background: #fff;
   margin-top: -5rem;
 }
+
 .report__page .report__body .report__nav {
   border-bottom: 1px solid #4b4b4b;
 }
+
 .report__page .report__body .report__nav .nav__lists .nav__list {
-  transition: 0.3s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
   border-bottom: 2px solid transparent;
   padding: 1rem 0;
 }
+
 .report__page .report__body .report__nav .nav__lists .nav__list:hover {
   border-bottom: 2px solid #424242;
 }
+
 .report__page .report__body .report__nav .nav__lists .nav__list a {
   color: #454582;
   font-weight: bold;
-  transition: 0.3s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
 }
+
 .report__page .report__body .print {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-right: 3rem;
   padding: 3rem 0;
 }
+
 .report__page .report__body .print button {
   display: inline-block;
   padding: 1rem 3rem;
@@ -323,130 +439,117 @@ select::-ms-expand {
   background: #000;
   color: #fff;
   border: 1px solid transparent;
-  transition: 0.3s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
   font-size: 1rem;
 }
+
 .report__page .report__body .print button:hover {
   color: #333;
   background: transparent;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
 }
+
 .report__page .report__body .personal__details {
   border-bottom: 1px solid #4b4b4b;
   width: 95%;
   margin: 0 auto;
   padding-bottom: 3rem;
 }
+
 .report__page .report__body .personal__details .heading {
   padding-bottom: 2rem;
 }
+
 .report__page .report__body .personal__details .heading p {
   font-size: 1.5rem;
   font-weight: 600;
   color: #32325D;
 }
+
 .report__page .report__body .personal__details .details {
   width: 80%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
 }
+
 .report__page .report__body .personal__details .details .phone__number, .report__page .report__body .personal__details .details .email, .report__page .report__body .personal__details .details .dob, .report__page .report__body .personal__details .details .occupation, .report__page .report__body .personal__details .details .nationality, .report__page .report__body .personal__details .details .gender {
   padding: 2rem 0;
 }
+
 .report__page .report__body .personal__details .details .phone__number .title, .report__page .report__body .personal__details .details .email .title, .report__page .report__body .personal__details .details .dob .title, .report__page .report__body .personal__details .details .occupation .title, .report__page .report__body .personal__details .details .nationality .title, .report__page .report__body .personal__details .details .gender .title {
   padding-bottom: 1rem;
   font-weight: 600;
   color: #32325D;
 }
+
 .report__page .report__body .personal__details .details .phone__number .text, .report__page .report__body .personal__details .details .email .text, .report__page .report__body .personal__details .details .dob .text, .report__page .report__body .personal__details .details .occupation .text, .report__page .report__body .personal__details .details .nationality .text, .report__page .report__body .personal__details .details .gender .text {
   color: #a5a5a5;
   font-size: 15px;
 }
+
 .report__page .report__body .medical__info {
   border-bottom: 1px solid #4b4b4b;
   width: 95%;
   margin: 0 auto;
   padding-bottom: 3rem;
 }
+
 .report__page .report__body .medical__info .heading {
   padding: 2rem 0;
 }
+
 .report__page .report__body .medical__info .heading p {
   font-size: 1.5rem;
   font-weight: 600;
   color: #32325D;
 }
+
 .report__page .report__body .medical__info .table {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   padding: 3rem 0;
 }
+
 .report__page .report__body .medical__info .table .table__heading {
   border-collapse: collapse;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .report__page .report__body .medical__info .table .table__heading tr {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-.report__page .report__body .medical__info .table .table__heading tr th {
-  background: #E3EAEF;
-}
+
 .report__page .report__body .medical__info .table .table__heading tr th, .report__page .report__body .medical__info .table .table__heading tr td {
-  margin-bottom: 1rem;
   text-align: center;
   width: 30%;
-  padding: 1rem 0;
 }
-.report__page .report__body .medical__info .table .table__heading tr td {
-  border-bottom: 1px solid #ddd;
-}
-.report__page .report__body .medical__info .sub__details {
-  width: 95%;
-  margin: 4rem auto;
-}
-.report__page .report__body .medical__info .sub__details .allergies .heading, .report__page .report__body .medical__info .sub__details .problem .heading, .report__page .report__body .medical__info .sub__details .took__test .heading {
-  font-weight: bold;
-  color: #32325D;
-}
-.report__page .report__body .medical__info .sub__details .allergies .text, .report__page .report__body .medical__info .sub__details .problem .text, .report__page .report__body .medical__info .sub__details .took__test .text {
-  color: #a5a5a5;
-  font-size: 15px;
-}
-.report__page .report__body .medical__info .sub__details2 {
-  width: 95%;
-  margin: 4rem auto;
-  display: flex;
-}
-.report__page .report__body .medical__info .sub__details2 .heading {
-  font-weight: bold;
-  color: #32325D;
-  padding: 0 2rem;
-}
-.report__page .report__body .medical__info .sub__details2 .text {
-  color: #a5a5a5;
-  font-size: 15px;
-  padding: 0 2rem;
-}
-@media (max-width: 960px) {
+
+@media (max-width: 940px) {
   .report__page .report__body .personal__details .details {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .report__page .report__body .medical__info .table {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-    padding: 3rem 0;
-  }
-  .report__page .report__body .medical__info .table .table__heading tr {
-    overflow: scroll;
-  }
-  .report__page .report__body .medical__info .sub__details, .report__page .report__body .medical__info .sub__details2 {
-    display: block;
-    width: 100%;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   .report__page .report__body .report__nav {
     border-bottom: 1px solid #4b4b4b;
@@ -455,16 +558,15 @@ select::-ms-expand {
     display: none;
   }
 }
+
 @media (max-width: 600px) {
   .report__page .report__body .personal__details {
     text-align: center;
   }
   .report__page .report__body .personal__details .details {
     width: 100%;
-    grid-template-columns: 1fr;
-  }
-  .report__page .report__body .medical__info .sub__details, .report__page .report__body .medical__info .sub__details2 {
-    text-align: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
@@ -477,21 +579,29 @@ select::-ms-expand {
     font-size: 2rem;
   }
   .report__page .showcase .edit__profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
+
 @media (max-width: 408px) {
   .report__page .showcase {
     text-align: center;
   }
   .report__page .showcase .edit__profile {
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .report__page .showcase .edit__profile a {
     font-size: 14px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=app.css.map */

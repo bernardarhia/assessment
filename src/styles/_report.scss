@@ -1,0 +1,71 @@
+.report__page{
+    .showcase{      
+        padding: 3rem 2.5rem 5rem 2.5rem;
+        background: $gradient;
+        @extend %flex_sb;
+        height: auto;
+        .username, .edit__profile{
+            padding: 3rem 2rem;
+        }
+        .username{
+            .name{
+                font-size: 2.5rem;
+                color: #fff;
+                padding-bottom: 1rem;
+            }
+            .text{
+                color: #fff;
+            }
+            
+        }
+        .edit__profile{
+            a{
+                display: inline-block;
+                background: #fff;
+                padding: 1rem 3rem;
+                box-shadow:0 0 20px rgba(0,0,0,0.09);
+                border-radius: 5px;
+                font-weight: 600;
+                color: #1171ef;
+            }
+        }
+    }
+
+    @import "./report_body";
+}
+
+
+@media (max-width:768px){
+    .report__page{
+
+        .showcase{      
+            display: block;
+            height: auto;
+            .username{
+                .name{
+                    font-size: 2rem;
+                }
+            }
+            .edit__profile{
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+@media (max-width:408px){
+    .report__page{
+
+        .showcase{      
+           text-align: center;
+            .edit__profile{
+                justify-content: center;
+                align-items: center;
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

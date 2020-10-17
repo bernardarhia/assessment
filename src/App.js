@@ -1,18 +1,18 @@
-import React from 'react';
-import AddCustomer from './components/AddCustomer';
-import Body from './components/Body';
-import Layout from './components/Layout';
-import Navbar from './components/Navbar';
-// import Collapsable from './Collapsable';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Report from "./components/Report";
+import Home from "./components/Home";
 
 function App() {
- 
   return (
     <>
-      <Navbar />
-      <AddCustomer />
-     <Body />
+      <Router>
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/report" component={Report} exact />
+        </Switch>
+      </Router>
     </>
   );
 }

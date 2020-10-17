@@ -1,6 +1,5 @@
 .sidebar{
     height: auto;
-    background: yellow;
     margin-right: 2rem;
     &__lists{
         @extend %flex_sb;
@@ -18,4 +17,12 @@
             }
         }
     }
+}
+
+
+@media (max-width:768px){
+
+       .sidebar{
+           display: none;
+       }
 }

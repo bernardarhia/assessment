@@ -1,6 +1,6 @@
 .form{
     height:auto;
-    padding: 0 3rem 3rem 3rem;
+    padding: 0 0 3rem 0;
     flex: 1;
     margin-left: 1rem;
     label{
@@ -97,20 +97,22 @@
     }
 
 .deficiencies{
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid;
 }
     .btns{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        button{
+        a{
             display: block;
             border: none;
             border-radius: 2px;
         }
 
         .previous {
-            button{
+            a{
                 padding: .7rem 2rem;
                 background: #F7FAFC;
                 box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.329);
@@ -122,7 +124,7 @@
         }
     }
         .save {
-            button{
+            a{
                 padding: 1rem;
                 background: #02C0CE;
                 box-shadow: 1px 0px 10px rgba(51, 51, 51, 0.308);
@@ -130,5 +132,35 @@
                 font-size: 1rem;
                 color: #fff;
             }
+    }
+}
+
+
+@media (max-width:950px){
+    .form{
+        .test{
+            display: block;
+
+            .blood__test{
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:560px){
+    .form{
+       margin-left: 0;
+
+   
+        .prove{
+            label{
+                &:nth-child(2){
+                    padding: 1.5rem !important;
+                }
+            }
+        }
     }
 }

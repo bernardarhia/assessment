@@ -1,27 +1,37 @@
 import React, { useState } from "react";
-
-const Form = () => {
-  const [diagnosis, setDiagnosis] = useState(true);
-  const [showForm, setShowForm] = useState(false);
+import Collapsable from "../components/Collapsable"
+import { option1, option2, option3 } from "../contents/diseases"
+import {Link} from "react-router-dom";
+const Form = (props) => {
+  const [diagnosis] = useState(true);
   const [status, setStatus] = useState("");
-
+  const [userData, setUserData] = useState({});
   const handleStatus = (e) => {
     setStatus(e.target.value);
   };
+  const handleUSerData = (e) => {
+    setUserData({
+      ...userData,
+      [e.target.name] : e.target.value
+    });
+  };
 
+  // const handleSubmit = (e) =>{
+  //   e.preventDefault()
+  //   props.history.push({
+  //     pathname: '/report',
+  //     state:"hello"
+  //   });
+  // }
   return (
     <div className="form">
+      <form >
+
       <div className="container">
         {/* disease input  */}
         <div className="disease__input">
-          <label htmlFor="disease">
-            Do you suffer from any of the following
-          </label>
-          <select id="disease">
-            <option value="Hello"> Hello </option>
-            <option value="Hello"> Hello </option>
-            <option value="Hello"> Hello </option>
-          </select>
+          <label htmlFor="">Do you suffer from any of the following</label>
+          <Collapsable handleUSerData={handleUSerData} options={option1} name="disease"/>
         </div>
 
         {/* disease status */}
@@ -30,7 +40,7 @@ const Form = () => {
             Status <sup style={{ fontSize: "20px" }}>*</sup>
           </label>
           <select
-            name=""
+            name="status"
             id="status"
             className="status__select"
             value={status}
@@ -42,30 +52,37 @@ const Form = () => {
         </div>
 
         {/* Year of diagnosis */}
-        {status === "Yes" && (
-          <div className="diagnosis">
-            <label htmlFor="diagnosis">Year of diagnosis</label>
-            <input type={diagnosis ? "date" : "text"} placeholder="Date" />
-          </div>
-        )}
+
+        <div className="diagnosis">
+          <label htmlFor="diagnosis">Year of diagnosis</label>
+          <input
+            type={diagnosis ? "date" : "text"}
+            placeholder="Date"
+            name="yearOfDiagnosis"
+            onChange={handleUSerData}
+          />
+        </div>
 
         {/* diagnosis type  and medication*/}
 
+        {status === "Yes" && (
+          <>
             <div className="diagnosis__type">
               <label htmlFor="">Diagnosis type</label>
-              <input type="text" />
+              <Collapsable handleUSerData={handleUSerData} options={option2} name="diagnosisType" />
             </div>
             <div className="medication">
               <label htmlFor="">Medication</label>
-              <input type="text" />
+              <Collapsable handleUSerData={handleUSerData} options={option3} name="medication" />
             </div>
-      
+          </>
+        )}
         {/* blood test */}
 
         <div className="test">
           <div className="blood__test">
             <label htmlFor="">When was your last blood test </label>
-            <input type="date" />
+            <input type="date" name="testDate" onChange={handleUSerData} />
           </div>
 
           <div className="prove">
@@ -76,25 +93,33 @@ const Form = () => {
             <input type="file" id="file" />
           </div>
         </div>
+        <label htmlFor="">Do you suffer from any of the following</label>
+        <Collapsable handleUSerData={handleUSerData} options={option1} name="disease2" />
 
         {/* Defeciencies */}
 
         <div className="deficiencies">
           <label htmlFor="">Any other deficiencies ?</label>
-          <input type="text" />
+          <Collapsable handleUSerData={handleUSerData}  options={option1} name="deficiencies" />
         </div>
+        <label htmlFor="">Do you suffer from any of the following</label>
+        <Collapsable handleUSerData={handleUSerData}  options={option1} name="disease3" />
 
         {/* submit buttons */}
 
         <div className="btns">
           <div className="previous">
-            <button>Previous</button>
+            <Link to="">Previous</Link>
           </div>
           <div className="save">
-            <button>Save</button>
+          <Link to={{
+            pathname:"/report",
+            state:{userData, status}
+          }}>Save</Link>
           </div>
         </div>
       </div>
+      </form>
     </div>
   );
 };

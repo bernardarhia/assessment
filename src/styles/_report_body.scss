@@ -1,0 +1,221 @@
+.report__body{
+    padding: 2rem;
+    background: #fff;
+    margin-top: -5rem;
+   
+    .report__nav{
+        border-bottom: 1px solid #4b4b4b;
+        .nav__lists{
+            @extend %flex_sb;
+
+            .nav__list{
+                transition: .3s ease-out;
+                border-bottom: 2px solid transparent;
+                padding: 1rem 0;
+                &:hover{
+                    border-bottom: 2px solid #424242;
+                }
+                a{
+                    color:hsl(240, 31%, 39%);
+                    font-weight: bold;
+                    transition: .3s ease-out;
+                }
+            }
+        }
+    }
+
+    .print{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 3rem;
+        padding:3rem 0;
+        button{
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-weight: 600;
+            background: #000;
+            color: #fff;
+            border: 1px solid transparent;
+            transition: .3s ease;
+            font-size: 1rem;
+            &:hover{
+                color: #333;
+                background: transparent;
+                box-shadow: 0 0 20px rgba(0,0,0,.24);
+            }
+        }
+    }
+
+    .personal__details{
+        border-bottom: 1px solid #4b4b4b;
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        .heading{
+            padding-bottom: 2rem;
+            p{
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $secondary_color;
+            }
+        }
+
+        .details{
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+            .phone__number, .email, .dob, .occupation, .nationality, .gender{
+                padding: 2rem 0;
+
+                .title{
+                    padding-bottom: 1rem;
+                    font-weight: 600;
+                    color: $secondary_color;
+                }
+                .text{
+                    color: rgb(165, 165, 165);
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .medical__info{
+        border-bottom: 1px solid #4b4b4b;
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        .heading{
+            padding: 2rem 0;
+            p{
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $secondary_color;
+            }
+        }
+
+        .table{
+            box-shadow: 0 0 20px rgba(0,0,0,.08);
+            padding: 3rem 0;
+            .table__heading{
+                border-collapse: collapse;
+                display: flex;
+                flex-direction: column;
+                tr {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    th{
+                        background: $body_bg;
+                        
+                    }
+                    th, td{
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        width: 30%;
+                        padding: 1rem 0;
+                    }
+
+                    td{
+                        border-bottom: 1px solid #ddd;
+                    }
+                }
+            }
+        }
+
+        .sub__details{
+            @extend %flex_sb;
+            width: 95%;
+            margin: 4rem auto;
+            .allergies, .problem, .took__test{
+                .heading{
+                    font-weight: bold;
+                    color: $secondary_color;
+                }
+
+                .text{
+                    color: rgb(165, 165, 165);
+                    font-size: 15px;
+                }
+            }
+        }
+        .sub__details2{
+            width: 95%;
+            margin: 4rem auto;
+            display: flex;
+            .heading{
+                font-weight: bold;
+                color: $secondary_color;
+                padding: 0 2rem;
+            }
+
+            .text{
+                color: rgb(165, 165, 165);
+                font-size: 15px;
+                padding: 0 2rem;
+            }
+        }
+    }
+}
+
+
+@media (max-width:960px){
+    .report__body{
+
+        .personal__details{
+           .details{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .medical__info{
+
+            .table{
+                box-shadow: 0 0 20px rgba(0,0,0,.08);
+                padding: 3rem 0;
+                .table__heading{
+                    tr {
+                        overflow: scroll;
+                        }
+                }
+            }
+    
+            .sub__details, .sub__details2{
+               display: block;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width:768px){
+    .report__body{
+        .report__nav{
+            border-bottom: 1px solid #4b4b4b;
+            .nav__lists{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .report__body{
+
+        .personal__details{
+            text-align: center;
+           .details{
+               width: 100%;
+                grid-template-columns: 1fr;
+            }
+        }
+        .medical__info{    
+            .sub__details, .sub__details2{
+               text-align: center;
+            }
+        }
+    }
+}
